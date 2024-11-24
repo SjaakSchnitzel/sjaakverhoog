@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 import { HomepageComponent } from './homepage/homepage.component';
 
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  imports: [HomepageComponent,]
+  standalone: true,
+  imports: [HomepageComponent],
+  template: '<app-home></app-home>',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Angular 19 Test';
-  currentRoute: string = '';
-  
-}
+export class AppComponent {}
+

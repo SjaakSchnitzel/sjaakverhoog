@@ -13,9 +13,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sjaakverhoog",
+            "allowedCommonJsDependencies": [
+              "lerc",
+              "preline",
+              "exceljs",
+              "rbush",
+              "xml-utils"
+            ],
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "./",
             "polyfills": [
               "zone.js"
             ],
@@ -29,7 +37,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/preline/dist/preline.js"
+            ]
           },
           "configurations": {
             "production": {
