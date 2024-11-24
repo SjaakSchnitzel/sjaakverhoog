@@ -1,0 +1,12 @@
+/* Tailwind-formaat invoervelden */
+.form-input {
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .form-input:focus {
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.25);
+  }
+  
+  
+ 
+  
