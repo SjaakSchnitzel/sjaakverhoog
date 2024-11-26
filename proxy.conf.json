@@ -1,0 +1,15 @@
+{
+    "/auth": {
+      "target": "https://members-ng.iracing.com",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "/data/league/get": {
+      "target": "https://members-ng.iracing.com",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

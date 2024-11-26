@@ -1,0 +1,52 @@
+<div class="container">
+    <h1>iRacing Dashboard</h1>
+  
+    <!-- Login Form -->
+    <div *ngIf="!isLoggedIn; else loggedInTemplate" class="login-form">
+        <h2>Login</h2>
+        <form (ngSubmit)="login(emailInput.value, passwordInput.value)">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            #emailInput
+            required
+            autocomplete="email"
+          />
+      
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            #passwordInput
+            required
+            autocomplete="current-password"
+          />
+      
+          <button type="submit" [disabled]="isLoading">
+            {{ isLoading ? 'Logging in...' : 'Login' }}
+          </button>
+        </form>
+      
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+      </div>
+  
+    <!-- Main Content -->
+    <ng-template #loggedInTemplate>
+      <div class="content">
+        <h2>Welcome to iRacing!</h2>
+        <button (click)="fetchLeagueDetails('8531', false)">
+          Fetch League Details
+        </button>
+  
+        <p *ngIf="isLoading">Loading...</p>
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  
+        <div *ngIf="leagueDetails" class="league-details">
+          <h3>League Details</h3>
+          <pre>{{ leagueDetails | json }}</pre>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  

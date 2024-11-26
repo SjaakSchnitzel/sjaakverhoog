@@ -1,0 +1,48 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  .login-form, .content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+ 
+  
+  .error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .league-details {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef;
+    border: 1px solid #bbd;
+    border-radius: 5px;
+  }
+  
